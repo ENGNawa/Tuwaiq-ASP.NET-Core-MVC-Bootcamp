@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Card</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .hotel-card {
+            border-radius: 15px;
+        }
+
+        .hotel-img {
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .rating-box {
+            background: #003b95;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="card shadow hotel-card p-4">
+
+            <div class="row align-items-center">
+
+                <!-- الصورة -->
+                <div class="col-md-4">
+                    <img src="t.img4.webp" class="img-fluid hotel-img w-100">
+                </div>
+
+
+                <!-- معلومات الفندق -->
+                <div class="col-md-5">
+
+                    <h2 class="text-primary fw-bold">
+                        جميرا جبل عمر
+                    </h2>
+
+                    <p class="text-primary fs-5">
+                        الرياض • اعرض على الخريطة • 17.6 كم من المركز
+                    </p>
+
+                    <h4 class="mt-4">
+                        غرفة اقتصادية مزدوجة
+                    </h4>
+
+                    <p class="fs-5">
+                        سرير مزدوج كبير
+                    </p>
+
+                    <p class="text-success fs-4 fw-bold">
+                        ✓ إلغاء مجاني
+                    </p>
+
+                </div>
+
+
+                <!-- السعر -->
+                <div class="col-md-3">
+
+                    <div class="d-flex gap-3 mb-4">
+
+                        <div class="rating-box">
+                            8.2
+                        </div>
+
+                        <div>
+                            <h4>جيد جداً</h4>
+                            <h5 class="text-primary">
+                                8.5 الراحة
+                            </h5>
+                            <p>613 تقييم</p>
+                        </div>
+
+                    </div>
+
+                    <p class="fs-5">
+                        17 ليلة، شخص واحد بالغ
+                    </p>
+
+                    <h1>
+                        SAR 2,348
+                    </h1>
+
+                    <p class="text-secondary">
+                        + SAR 411 ضرائب ورسوم
+                    </p>
+
+                    <button class="btn btn-primary w-100 p-3 fs-5">
+                        عرض التوافر
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
