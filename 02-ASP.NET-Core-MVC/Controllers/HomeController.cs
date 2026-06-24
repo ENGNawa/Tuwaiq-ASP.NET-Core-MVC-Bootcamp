@@ -6,6 +6,38 @@ namespace MyMvcApp.Controllers;
 
 public class HomeController : Controller
 {
+    public IActionResult Store(string searchTerm)
+    {
+        var allProducts = new List<object>
+    {
+        new { Id = 1, Name = "Laptop", Price = 3500, Image = "laptop.webp" },
+        new { Id = 2, Name = "Smart Phone", Price = 2500, Image = "phone.webp" },
+        new { Id = 3, Name = "Keyboard", Price = 150, Image = "keyboard.webp" },
+        new { Id = 4, Name = "Monitor", Price = 900, Image = "monitor.jpg" }
+    };
+
+        var filteredProducts = new List<object>();
+
+        foreach (var item in allProducts)
+        {
+            dynamic product = item;
+
+            if (string.IsNullOrEmpty(searchTerm) ||
+                product.Name.ToLower().Contains(searchTerm.ToLower()))
+            {
+                filteredProducts.Add(item);
+            }
+        }
+
+        ViewBag.MyProducts = filteredProducts;
+        ViewBag.CurrentSearch = searchTerm;
+
+        return View();
+    }
+    public IActionResult Courses()
+    {
+        return View("~/Views/Tuwaiq/Courses.cshtml");
+    }
     static string[] ArrayProduct = { "Mouse", "Keyboard", "Screen", "Laptop" };
 
     static List<string> ListProduct = new List<string>()

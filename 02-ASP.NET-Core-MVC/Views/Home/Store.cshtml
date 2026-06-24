@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "متجر المنتجات";
+}
+
+<div class="container mt-5 p-4" style="background:#f8fbff;border-radius:25px;">
+
+    <h2 class="text-center mb-4 fw-bold" style="color:#ff8fab;">
+        متجر المنتجات
+    </h2>
+
+    <form asp-action="Store" method="get" class="d-flex gap-2 mb-5">
+
+        <input type="text" name="searchTerm" value="@ViewBag.CurrentSearch" class="form-control"
+               placeholder="ابحث عن منتج" style="border:2px solid #bde0fe;border-radius:12px;">
+
+        <button type="submit" class="btn text-white px-4" style="background:#ff8fab;border:none;border-radius:12px;">
+            بحث
+        </button>
+
+        <a asp-action="Store" class="btn px-4" style="background:#bde0fe;color:#2f5d75;border:none;border-radius:12px;">
+            إلغاء التصفية
+        </a>
+
+    </form>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+
+        @foreach (var item in ViewBag.MyProducts)
+        {
+            <div class="col">
+                <div class="card h-100 shadow border-0 text-center"
+                     style="border-radius:22px;background:#fffafd;overflow:hidden;">
+
+                    <img src="~/images/@item.Image" alt="@item.Name" class="card-img-top p-3"
+                         style="height:140px;object-fit:contain;background:white;">
+
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold" style="color:#7aa6c2;">
+                            @item.Name
+                        </h5>
+
+                        <p class="fw-bold fs-5" style="color:#ff8fab;">
+                            @item.Price ريال
+                        </p>
+                    </div>
+
+                    <div class="card-footer border-0 p-3" style="background:#fffafd;">
+                        <button class="btn w-100 text-white" style="background:#a2d2ff;border:none;border-radius:14px;">
+                            شراء الآن
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
