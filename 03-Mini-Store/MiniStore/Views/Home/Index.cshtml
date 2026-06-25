@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "الرئيسية";
+}
+
+<section class="hero-section">
+    <div class="container">
+
+        <div class="hero-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="hero-title">Nawa</h1>
+                    <p class="hero-text mt-3">
+                        اكتشف تشكيلة مميزة من الإلكترونيات والملابس والكتب، بتصميم أنيق وتجربة تسوق بسيطة.
+                    </p>
+                    <a href="#categories" class="btn btn-pomelli mt-3">
+                        تصفح الفئات
+                    </a>
+                </div>
+
+                <div class="col-lg-5 text-center">
+                    <i class="fa-solid fa-bag-shopping" style="font-size:160px; color:#f6f0df33;"></i>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="categories" class="mb-4 fw-bold">الفئات</h2>
+
+        <div class="row g-4">
+            @foreach (var category in ViewBag.CategoriesList)
+            {
+                <div class="col-md-4">
+                    <div class="store-card">
+                        <div class="icon-box">
+                            <i class="@category.Icon"></i>
+                        </div>
+
+                        <h3 class="fw-bold">@category.Name</h3>
+                        <p class="hero-text">
+                            اكتشفي منتجات مختارة بعناية داخل هذه الفئة.
+                        </p>
+
+                        <a asp-controller="Home" asp-action="Products" asp-route-id="@category.Id" class="btn btn-pomelli">
+                            عرض المنتجات
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

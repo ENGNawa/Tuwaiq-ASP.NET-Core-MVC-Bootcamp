@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "المنتجات";
+}
+
+<section class="hero-section">
+    <div class="container">
+
+        <div class="hero-card mb-5">
+            <h1 class="hero-title">@ViewBag.CategoryName</h1>
+            <p class="hero-text">منتجات مختارة من هذه الفئة.</p>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var product in ViewBag.FilteredProducts)
+            {
+                <div class="col-md-4">
+                    <div class="store-card text-center">
+
+                        <img src="~/images/@product.Image" class="img-fluid product-img" alt="@product.Name" />
+
+                        <h3 class="fw-bold">@product.Name</h3>
+
+                        <p class="hero-text">@product.Description</p>
+
+                        <h4 class="fw-bold mb-3">@product.Price SAR</h4>
+
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@product.Id" class="btn btn-pomelli">
+                            التفاصيل
+                        </a>
+
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="mt-5">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-pomelli">
+                رجوع للرئيسية
+            </a>
+        </div>
+
+    </div>
+</section>

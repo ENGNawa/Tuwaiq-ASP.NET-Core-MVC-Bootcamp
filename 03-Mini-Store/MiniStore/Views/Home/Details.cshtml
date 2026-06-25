@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "تفاصيل المنتج";
+    var product = ViewBag.Product;
+}
+
+<section class="hero-section">
+    <div class="container">
+
+        <div class="hero-card">
+            <div class="row align-items-center g-5">
+
+                <div class="col-md-5 text-center">
+                    <img src="~/images/@product.Image" class="img-fluid" style="max-height:320px; object-fit:contain;"
+                         alt="@product.Name" />
+                </div>
+
+                <div class="col-md-7">
+                    <h1 class="hero-title">@product.Name</h1>
+
+                    <p class="hero-text mt-3">
+                        @product.Description
+                    </p>
+
+                    <h2 class="fw-bold my-4">
+                        @product.Price SAR
+                    </h2>
+
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-pomelli">
+                        رجوع للرئيسية
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

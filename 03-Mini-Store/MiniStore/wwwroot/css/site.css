@@ -1,0 +1,124 @@
+:root {
+  --olive-dark: #1f2a17;
+  --olive: #3f4a22;
+  --olive-soft: #6f7940;
+  --cream: #f6f0df;
+  --white: #ffffff;
+  --orange: #e5542e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(111, 121, 64, .25), transparent 28%),
+    linear-gradient(135deg, #11180d, #253018 55%, #10150c);
+  color: var(--cream);
+  min-height: 100vh;
+}
+
+.custom-navbar {
+  background: rgba(31, 42, 23, .72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(246, 240, 223, .12);
+  padding: 8px 0;
+}
+
+.brand-logo {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--cream) !important;
+}
+
+.nav-link {
+  color: var(--cream) !important;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hero-section {
+  padding: 38px 0 28px;
+}
+
+.hero-card {
+  background: rgba(246, 240, 223, .08);
+  border: 1px solid rgba(246, 240, 223, .14);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .25);
+  backdrop-filter: blur(14px);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 46px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.hero-text {
+  color: rgba(246, 240, 223, .82);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.store-card {
+  background: rgba(246, 240, 223, .10);
+  border: 1px solid rgba(246, 240, 223, .14);
+  border-radius: 18px;
+  padding: 16px;
+  transition: .3s;
+  height: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+  background: rgba(246, 240, 223, .15);
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--orange), var(--olive-soft));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.btn-pomelli {
+  background: var(--cream);
+  color: var(--olive-dark);
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.btn-pomelli:hover {
+  background: var(--orange);
+  color: white;
+}
+
+.product-img {
+  height: 120px;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.footer-area {
+  padding: 15px 0;
+  font-size: 13px;
+  color: rgba(246, 240, 223, .65);
+}
